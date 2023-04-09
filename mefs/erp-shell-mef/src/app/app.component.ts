@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'erp-shell-mef';
+
+  //Shell microfrontend
+  sendNotification() {
+    const event = new CustomEvent('product_mef_delete_event', {
+      detail: {
+        name: "Product 1",
+      }
+    });
+    window.dispatchEvent(event);
+  }
 }
