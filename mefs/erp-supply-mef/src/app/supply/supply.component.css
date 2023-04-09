@@ -1,0 +1,56 @@
+:host {
+  display: block;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+}
+
+.grid-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0077b6;
+  color: white;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.grid-header h2 {
+  margin: 0;
+}
+
+.grid-header button {
+  background-color: #fff;
+  color: #0077b6;
+  border: 2px solid #0077b6;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.grid-header button:hover {
+  background-color: #0077b6;
+  color: #fff;
+}
+
+.grid-table {
+  border: 1px solid #ddd;
+  border-radius: 0 0 5px 5px;
+}
+
+.grid-table th,
+.grid-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.grid-table th {
+  background-color: #0077b6;
+}

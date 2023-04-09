@@ -1,1 +1,22 @@
-<p>product works!</p>
+<div class="grid">
+  <div class="grid-header">
+    <h2>Product Grid</h2>
+    <button (click)="addProduct()">Add Product</button>
+  </div>
+  <table class="grid-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

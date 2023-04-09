@@ -1,1 +1,22 @@
-<p>employee works!</p>
+<div class="grid">
+  <div class="grid-header">
+    <h2>Employee Grid</h2>
+    <button (click)="addEmployee()">Add Employee</button>
+  </div>
+  <table class="grid-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.department }}</td>
+        <td>{{ employee.salary }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

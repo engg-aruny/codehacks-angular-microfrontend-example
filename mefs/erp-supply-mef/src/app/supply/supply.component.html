@@ -1,1 +1,22 @@
-<p>supply works!</p>
+<div class="grid">
+  <div class="grid-header">
+    <h2>Supply Grid</h2>
+    <button (click)="addSupply()">Add Supply</button>
+  </div>
+  <table class="grid-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let supply of supplies">
+        <td>{{ supply.name }}</td>
+        <td>{{ supply.quantity }}</td>
+        <td>{{ supply.price | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
